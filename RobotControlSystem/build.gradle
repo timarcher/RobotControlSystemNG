@@ -27,5 +27,10 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile 'com.github.ytai.ioio:IOIOLibAndroid:5.07'
+    compile 'com.github.ytai.ioio:IOIOLibAndroidBluetooth:5.07'
+    compile 'com.github.ytai.ioio:IOIOLibAndroidAccessory:5.07'
+    compile 'com.github.ytai.ioio:IOIOLibAndroidDevice:5.07'
+    compile 'com.android.support:appcompat-v7:25.1.0'
     testCompile 'junit:junit:4.12'
 }
