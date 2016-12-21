@@ -51,7 +51,7 @@ public class NotificationService {
 	 */
 	public void showNotification(String title, String description, int notificationId) {		
 		if (notificationManager != null) {
-			/*OLd for android v11
+			/*Old for android v11
 		    Notification not = new Notification(R.drawable.ic_launcher, "RCS Running", System.currentTimeMillis());
 		    PendingIntent contentIntent = PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), Notification.FLAG_ONGOING_EVENT);        
 		    not.flags = Notification.FLAG_ONGOING_EVENT;
@@ -60,7 +60,7 @@ public class NotificationService {
 		    */
 			
 		    //New for android v16+
-			PendingIntent contentIntent = PendingIntent.getActivity(context, 0, new Intent(context, MainActivity.class), Notification.FLAG_ONGOING_EVENT);
+			PendingIntent contentIntent = PendingIntent.getActivity(context, 0, new Intent(context, MainActivity.class), PendingIntent.FLAG_ONE_SHOT);
 		    Notification.Builder builder = new Notification.Builder(context);
 		    Resources res = context.getResources();
 		    builder.setContentIntent(contentIntent)
@@ -71,6 +71,7 @@ public class NotificationService {
 		                .setAutoCancel(false)
 		                .setContentTitle(title)
 		                .setContentText(description);
+						//.setOngoing(true);
 		    Notification not = builder.build();
 		    
 		    notificationManager.notify(notificationId, not);

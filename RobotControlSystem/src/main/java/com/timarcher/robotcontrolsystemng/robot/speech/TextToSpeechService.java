@@ -1,6 +1,7 @@
 package com.timarcher.robotcontrolsystemng.robot.speech;
 
 import java.util.Locale;
+import java.util.UUID;
 
 import android.content.Context;
 import android.speech.tts.TextToSpeech;
@@ -32,7 +33,7 @@ public class TextToSpeechService implements TextToSpeech.OnInitListener {
 	 * Constructor
 	 */
 	public TextToSpeechService(Context context) {
-		_tts = new TextToSpeech(context, this);	
+        _tts = new TextToSpeech(context, this);
 	}
 	
 	/**
@@ -104,14 +105,15 @@ public class TextToSpeechService implements TextToSpeech.OnInitListener {
      * @param text
      */
     public void sayIt (String text) {
-    	_tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);    	
+        String utteranceId = UUID.randomUUID().toString();
+        _tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, utteranceId);
     }
     
     /**
      * Method to get whether the TTS engine has been initialized or not.
      */
     public boolean isInitialized () {
-    	return _isInitialized;    	
+        return _isInitialized;
     }
     
 }

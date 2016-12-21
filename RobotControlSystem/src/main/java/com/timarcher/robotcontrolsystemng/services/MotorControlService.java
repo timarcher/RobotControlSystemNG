@@ -305,7 +305,6 @@ public class MotorControlService {
 	
 	/**
 	 * Stops the motors and sets the brakes to enabled.
-	 * @param isEnabled
 	 */
 	public void stopMotors() throws ConnectionLostException {
 		_isRobotMoving = false;		

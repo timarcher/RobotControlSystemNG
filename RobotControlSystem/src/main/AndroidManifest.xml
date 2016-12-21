@@ -53,7 +53,17 @@
                 android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
                 android:resource="@xml/device_filter" />
         </activity>
+
+        <!-- Diagnostics Activity -->
         <activity android:name=".activities.DiagnosticsActivity"></activity>
+
+        <!-- Robot/Hardware Interface Service -->
+        <service
+            android:name="com.timarcher.robotcontrolsystemng.services.RobotInterfaceService"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/robot_interface_service"
+            >
+        </service>
     </application>
 
 </manifest>
