@@ -1,14 +1,17 @@
 package com.timarcher.robotcontrolsystemng.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.timarcher.robotcontrolsystemng.MainActivity;
 import com.timarcher.robotcontrolsystemng.R;
 
-public class SplashScreenActivity extends AppCompatActivity {
+/**
+ * The main splash screen for the application.
+ */
+public class SplashScreenActivity extends Activity {
 
     // Splash screen timer
     private static int SPLASH_TIME_OUT = 3000;

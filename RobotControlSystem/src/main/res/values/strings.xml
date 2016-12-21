@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">RCS NG</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_diagnostics">Diagnostics</string>
+    <string name="robot_interface_service">Robot Interface Service</string>
 </resources>
