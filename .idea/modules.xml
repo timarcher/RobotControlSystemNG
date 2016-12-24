@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/IOIOLibAndroid/IOIOLibAndroid.iml" filepath="$PROJECT_DIR$/IOIOLibAndroid/IOIOLibAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IOIOLibAndroidAccessory/IOIOLibAndroidAccessory.iml" filepath="$PROJECT_DIR$/IOIOLibAndroidAccessory/IOIOLibAndroidAccessory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IOIOLibAndroidBluetooth/IOIOLibAndroidBluetooth.iml" filepath="$PROJECT_DIR$/IOIOLibAndroidBluetooth/IOIOLibAndroidBluetooth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IOIOLibAndroidDevice/IOIOLibAndroidDevice.iml" filepath="$PROJECT_DIR$/IOIOLibAndroidDevice/IOIOLibAndroidDevice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IOIOLibCore/IOIOLibCore.iml" filepath="$PROJECT_DIR$/IOIOLibCore/IOIOLibCore.iml" />
       <module fileurl="file://$PROJECT_DIR$/RobotControlSystem/RobotControlSystem.iml" filepath="$PROJECT_DIR$/RobotControlSystem/RobotControlSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/RobotControlSystemNG.iml" filepath="$PROJECT_DIR$/RobotControlSystemNG.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />

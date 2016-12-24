@@ -132,8 +132,8 @@ public class MotorControlService {
 	double integralError = 0;							
 	double leftError = 0;
 	double rightError = 0;
-	protected static final double INTEGRAL_ERROR_GAIN = 0.2;
-	protected static final double PROPORTIONAL_GAIN = 0.2;
+	protected static final double INTEGRAL_ERROR_GAIN = 0.1;
+	protected static final double PROPORTIONAL_GAIN = 0.1;
 	
 	/**
 	 * Constructor
@@ -185,12 +185,8 @@ public class MotorControlService {
 						//Get our encoder values
 						//Because this is a quadrature encoder, we add together both encoders clicks
 						//
-/*TODO TEA 12/21/16 Reenable me after adding to the IOIO libs
 						long sampledRightClicks = ioio.getRightMotorEncoder1().getPulseCount() + ioio.getRightMotorEncoder2().getPulseCount();
 						long sampledLeftClicks = ioio.getLeftMotorEncoder1().getPulseCount() + ioio.getLeftMotorEncoder2().getPulseCount();
-*/
-						long sampledRightClicks = 0;
-						long sampledLeftClicks = 0;
 
 						motorControlService.clearMotorEncoderPulseCounts();
 						
@@ -219,8 +215,8 @@ public class MotorControlService {
 							rightError = PROPORTIONAL_GAIN * (desiredVelocityClicks + desiredBiasClicks - sampledRightClicks + integralError);
 							
 							
-							//Log.d(LOGTAG,  "MotorControlService.MotorMonitorJob     Left Velocity: " + motorControlService.getLeftMotorVelocity() + " Left Error: " + leftError);
-							//Log.d(LOGTAG,  "MotorControlService.MotorMonitorJob     Right Velocity: " + motorControlService.getRightMotorVelocity() + " Right Error: " + rightError);
+							Log.d(LOGTAG,  "MotorControlService.MotorMonitorJob     Left Velocity: " + motorControlService.getLeftMotorVelocity() + " Left Error: " + leftError);
+							Log.d(LOGTAG,  "MotorControlService.MotorMonitorJob     Right Velocity: " + motorControlService.getRightMotorVelocity() + " Right Error: " + rightError);
 							
 							
 						    //Take (Max motor Speed * ((Motor Speed Converted To %) + Error) ) / 100
@@ -448,12 +444,10 @@ public class MotorControlService {
 	 * @throws ConnectionLostException
 	 */
 	public void clearMotorEncoderPulseCounts () throws ConnectionLostException {
-/*TODO TEA 12/21/16 Reenable me after adding to the IOIO libs
 		ioio.getLeftMotorEncoder1().clearPulseCount();
 		ioio.getLeftMotorEncoder2().clearPulseCount();
 		ioio.getRightMotorEncoder1().clearPulseCount();
 		ioio.getRightMotorEncoder2().clearPulseCount();
-*/
 	}
 	
 	/**

@@ -72,11 +72,11 @@ public class RobotInterfaceService extends IOIOService {
 		    			} catch (Exception e) {				
 		    			}
 		    			*/
-	    				
-		    			for (int i = 0; i < 5; i++) {
+	    				/*
+		    			for (int i = 0; i < 1; i++) {
 			    			try {
-/*TODO Removed this startup code
-				    			tts.sayIt("Turning 180 degrees");			
+				    			tts.sayIt("Turning 180 degrees");
+
 			    				//turn 180 degrees at 50% speed
 			    				motorControlService.turn(360, 50);
 			    				do {
@@ -93,13 +93,11 @@ public class RobotInterfaceService extends IOIOService {
 			    				} while (motorControlService.isRobotMoving());		    				
 
 			    				Thread.sleep(1500);
-*/
 			    			} catch (Exception e) {				
 			    			}
 		    			}
 		    			
-		    			
-		    			/*
+
 		    			try {
 			    			tts.sayIt("Going forward");			
 		    				//Go forward 6 feet at 50% speed
@@ -124,7 +122,6 @@ public class RobotInterfaceService extends IOIOService {
 		    			} catch (Exception e) {				
 		    			}
 		    			*/
-		    			
 		    			/*
 		        		for (;;) {
 		        			Thread.sleep(2000);

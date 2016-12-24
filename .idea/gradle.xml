@@ -9,6 +9,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/IOIOLibAndroid" />
+            <option value="$PROJECT_DIR$/IOIOLibAndroidAccessory" />
+            <option value="$PROJECT_DIR$/IOIOLibAndroidBluetooth" />
+            <option value="$PROJECT_DIR$/IOIOLibAndroidDevice" />
+            <option value="$PROJECT_DIR$/IOIOLibCore" />
             <option value="$PROJECT_DIR$/RobotControlSystem" />
             <option value="$PROJECT_DIR$/app" />
           </set>

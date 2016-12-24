@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
                     Looper.prepare();
                     for (;;) {
                         Thread.sleep(2000);
-                        Log.d("app", "Service: " + s);
+                        //Log.d("app", "Service: " + s);
                         if (s != null) {
                             runOnUiThread(new Runnable() {
                                 public void run() {
@@ -99,7 +99,7 @@ public class MainActivity extends Activity {
         public void onServiceConnected(ComponentName className, IBinder binder) {
             RobotInterfaceService.RobotInterfaceServiceBinder b = (RobotInterfaceService.RobotInterfaceServiceBinder) binder;
             s = b.getService();
-            Toast.makeText(MainActivity.this, "Connected", Toast.LENGTH_SHORT)
+            Toast.makeText(MainActivity.this, "Service Connected", Toast.LENGTH_SHORT)
                     .show();
         }
 

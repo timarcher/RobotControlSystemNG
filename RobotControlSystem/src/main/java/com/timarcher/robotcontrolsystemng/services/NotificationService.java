@@ -60,7 +60,7 @@ public class NotificationService {
 		    */
 			
 		    //New for android v16+
-			PendingIntent contentIntent = PendingIntent.getActivity(context, 0, new Intent(context, MainActivity.class), PendingIntent.FLAG_ONE_SHOT);
+			PendingIntent contentIntent = PendingIntent.getActivity(context, 0, new Intent(context, MainActivity.class), PendingIntent.FLAG_UPDATE_CURRENT);
 		    Notification.Builder builder = new Notification.Builder(context);
 		    Resources res = context.getResources();
 		    builder.setContentIntent(contentIntent)
@@ -68,7 +68,7 @@ public class NotificationService {
 		                .setLargeIcon(BitmapFactory.decodeResource(res, R.mipmap.ic_launcher))
 		                .setTicker(title + " - Initialized")
 		                .setWhen(System.currentTimeMillis())
-		                .setAutoCancel(false)
+		                //.setAutoCancel(false)
 		                .setContentTitle(title)
 		                .setContentText(description);
 						//.setOngoing(true);

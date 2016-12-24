@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath 'com.android.tools.build:gradle:1.5.0'
+  }
+}
+
+android {
+  buildToolsVersion "23.0.2"
+  /* TEA Changed this
+  compileSdkVersion "Google Inc.:Google APIs:12"*/
+  compileSdkVersion "Google Inc.:Google APIs:23"
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_7
+    targetCompatibility JavaVersion.VERSION_1_7
+  }
+}
+/*
+uploadArchives {
+  repositories {
+    mavenDeployer {
+      pom.project {
+        name = 'IOIOLibAndroidDevice'
+        description = 'IOIO library for Android - USB device extenstion'
+        packaging = 'aar'
+      }
+    }
+  }
+}
+*/
+dependencies {
+  compile project(':IOIOLibAndroid')
+}
